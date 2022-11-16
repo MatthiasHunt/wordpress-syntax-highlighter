@@ -1,0 +1,22 @@
+{
+  "scopeName": "gutenburg-comment.injection",
+  "injectionSelector": "L:comment.block.html",
+  "patterns": [
+    {
+      "include": "#gutenburg"
+    },
+    {
+      "include": "#gutenburg-json"
+    }
+  ],
+  "repository": {
+    "gutenburg": {
+      "match": "(wp:[^ ]+)",
+      "name": "variable.parameter.gutenburg"
+    },
+    "gutenburg-json": {
+      "match": "{([^}]+)}",
+      "name": "meta.embedded.json.gutenburg"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "gutenburg-comment-highlight",
+  "displayName": "gutenburg-comment-highlight",
+  "description": "Syntax highlighting for Gutenburg HTML comments",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "gutenburg-comment.injection",
+        "path": "./syntaxes/injection.json",
+        "injectTo": [
+          "text.html"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.json.gutenburg": "json"
+        },
+        "tokenTypes": {
+          "meta.embedded.json.gutenburg": "other"
+        }
+      }
+    ]
+  }
+}
