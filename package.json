@@ -9,6 +9,7 @@
   "bugs": {
     "url": "https://github.com/chrisrhymes/gutenburg-comment-highlight/issues"
   },
+  "publisher": "chrisrhymes",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.73.0"
