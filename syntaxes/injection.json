@@ -16,7 +16,12 @@
     },
     "gutenburg-json": {
       "match": "{([^}]+)}",
-      "name": "source.json"
+      "name": "meta.embedded.block.json",
+      "patterns": [
+        {
+          "include": "source.json"
+        }
+      ]
     }
   }
 }
