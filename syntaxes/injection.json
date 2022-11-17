@@ -16,7 +16,7 @@
     },
     "gutenburg-json": {
       "match": "{([^}]+)}",
-      "name": "meta.embedded.json.gutenburg"
+      "name": "source.json"
     }
   }
 }

@@ -18,10 +18,10 @@
           "text.html"
         ],
         "embeddedLanguages": {
-          "meta.embedded.json.gutenburg": "json"
+          "source.json": "json"
         },
         "tokenTypes": {
-          "meta.embedded.json.gutenburg": "other"
+          "source.json": "other"
         }
       }
     ]
