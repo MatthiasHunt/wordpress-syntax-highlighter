@@ -15,7 +15,8 @@
       "name": "variable.parameter.gutenburg"
     },
     "gutenburg-json": {
-      "match": "{([^}]+)}",
+      "begin": "\\{",
+      "end": "\\}",
       "name": "meta.embedded.block.json",
       "patterns": [
         {

@@ -1,5 +1,7 @@
-# gutenburg-comment-highlight README
+# gutenburg-comment-highlight
 
-This VS Code extension adds syntax highlighting to WordPress themes supporting Gutenburg blocks. The extension makes the comments more readable, instead of being greyed out like standard HTML comments.
+This Visual Studio Code extension adds syntax highlighting to WordPress themes supporting Gutenburg blocks. The extension makes the comments more readable, instead of being greyed out like standard HTML comments.
 
-It needs more work on the JSON highlighting.
+The block name, begining `wp:` will show as a variable and any json strings will have basic json highlighting.
+
+![Code highlight example](assets/highlight-example.png)

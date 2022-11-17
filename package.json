@@ -2,6 +2,13 @@
   "name": "gutenburg-comment-highlight",
   "displayName": "gutenburg-comment-highlight",
   "description": "Syntax highlighting for Gutenburg HTML comments",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisrhymes/gutenburg-comment-highlight"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisrhymes/gutenburg-comment-highlight/issues"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.73.0"
