@@ -1,20 +1,20 @@
 {
-  "scopeName": "gutenburg-comment.injection",
+  "scopeName": "gutenberg-comment.injection",
   "injectionSelector": "L:comment.block.html",
   "patterns": [
     {
-      "include": "#gutenburg"
+      "include": "#gutenberg"
     },
     {
-      "include": "#gutenburg-json"
+      "include": "#gutenberg-json"
     }
   ],
   "repository": {
-    "gutenburg": {
+    "gutenberg": {
       "match": "(wp:[^ ]+)",
-      "name": "variable.parameter.gutenburg"
+      "name": "variable.parameter.gutenberg"
     },
-    "gutenburg-json": {
+    "gutenberg-json": {
       "begin": "\\{",
       "end": "\\}",
       "name": "meta.embedded.block.json",

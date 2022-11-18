@@ -1,9 +1,11 @@
 # Change Log
 
-All notable changes to the "gutenburg-comment-highlight" extension will be documented in this file.
+All notable changes to the "gutenberg-comment-highlight" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [0.0.2]
 
-## [Unreleased]
+- Updated display name and added icon
+
+## [0.0.1]
 
 - Initial release
