@@ -24,7 +24,8 @@
         "scopeName": "gutenberg-comment.injection",
         "path": "./syntaxes/injection.json",
         "injectTo": [
-          "text.html.derivative"
+          "text.html.derivative",
+          "text.html.php"
         ],
         "embeddedLanguages": {
           "meta.embedded.block.json": "json"
