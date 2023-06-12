@@ -11,7 +11,7 @@
     "url": "https://github.com/chrisrhymes/gutenburg-comment-highlight/issues"
   },
   "publisher": "chrisrhymes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.73.0"
   },
