@@ -1,0 +1,15 @@
+{
+  "scopeName": "gutenberg-css.injection",
+  "injectionSelector": "L:comment.block.css",
+  "patterns": [
+    {
+      "include": "#gutenberg-css"
+    }
+  ],
+  "repository": {
+    "gutenberg-css": {
+      "match": "(a)",
+      "name": "support.class.component.gutenberg"
+    }
+  }
+}

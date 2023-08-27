@@ -1,23 +1,23 @@
 {
-  "scopeName": "gutenberg-comment.injection",
+  "scopeName": "gutenberg-html.injection",
   "injectionSelector": "L:comment.block.html",
   "patterns": [
     {
-      "include": "#gutenberg"
+      "include": "#gutenberg-html"
     },
     {
-      "include": "#gutenberg-json"
+      "include": "#gutenberg-embedded-json"
     },
     {
-      "include": "#gutenberg-php"
+      "include": "#gutenberg-embedded-php"
     }
   ],
   "repository": {
-    "gutenberg": {
+    "gutenberg-html": {
       "match": "(wp:[^ ]+)",
       "name": "support.class.component.gutenberg"
     },
-    "gutenberg-json": {
+    "gutenberg-embedded-json": {
       "begin": "\\{",
       "end": "\\}",
       "name": "meta.embedded.block.json",
@@ -27,7 +27,7 @@
         }
       ]
     },
-    "gutenberg-php": {
+    "gutenberg-embedded-php": {
       "begin": "<\\?(?i:php|=)?",
       "beginCaptures": {
         "0": {
