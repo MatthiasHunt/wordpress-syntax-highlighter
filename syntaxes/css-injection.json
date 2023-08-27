@@ -8,8 +8,18 @@
   ],
   "repository": {
     "gutenberg-css": {
-      "match": "(a)",
-      "name": "support.class.component.gutenberg"
+      "match": "([Aa])",
+      "name": "variable.parameter.gutenberg"
+    },
+    "gutenberg-embedded-yaml": {
+      "begin": "(Theme)",
+      "end": "(WordPress)",
+      "name": "meta.embedded.block.yaml",
+      "patterns": [
+        {
+          "include": "source.yaml"
+        }
+      ]
     }
   }
 }
