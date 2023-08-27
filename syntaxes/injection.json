@@ -15,7 +15,7 @@
   "repository": {
     "gutenberg": {
       "match": "(wp:[^ ]+)",
-      "name": "variable.parameter.gutenberg"
+      "name": "entity.other.attribute-name.gutenberg"
     },
     "gutenberg-json": {
       "begin": "\\{",
