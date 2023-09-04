@@ -6,20 +6,18 @@
       "include": "#gutenberg-html"
     },
     {
-      "include": "#gutenberg-embedded-json"
-    },
-    {
       "include": "#gutenberg-embedded-php"
     }
   ],
   "repository": {
     "gutenberg-html": {
-      "match": "(wp:[^ ]+)",
-      "name": "support.class.component.gutenberg"
-    },
-    "gutenberg-embedded-json": {
-      "begin": "\\{",
-      "end": "\\}",
+      "begin": "(wp:[^ ]+)",
+      "beginCaptures": {
+        "0": {
+          "name": "support.class.component.gutenberg"
+        }
+      },
+      "end": ".?(?=\\/-->)",
       "name": "meta.embedded.block.json",
       "patterns": [
         {
