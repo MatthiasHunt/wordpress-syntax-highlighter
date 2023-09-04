@@ -1,0 +1,25 @@
+{
+  "scopeName": "gutenberg-css.injection",
+  "injectionSelector": "L:comment.block.css",
+  "patterns": [
+    {
+      "include": "#gutenberg-css"
+    }
+  ],
+  "repository": {
+    "gutenberg-css": {
+      "match": "([Aa])",
+      "name": "variable.parameter.gutenberg"
+    },
+    "gutenberg-embedded-yaml": {
+      "begin": "(Theme)",
+      "end": "(WordPress)",
+      "name": "meta.embedded.block.yaml",
+      "patterns": [
+        {
+          "include": "source.yaml"
+        }
+      ]
+    }
+  }
+}
