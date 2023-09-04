@@ -1,25 +1,26 @@
 {
-  "scopeName": "gutenberg-css.injection",
+  "scopeName": "wordpress-css.injection",
   "injectionSelector": "L:comment.block.css",
   "patterns": [
     {
-      "include": "#gutenberg-css"
+      "include": "#wordpress-css"
     }
   ],
   "repository": {
-    "gutenberg-css": {
-      "match": "([Aa])",
-      "name": "variable.parameter.gutenberg"
-    },
-    "gutenberg-embedded-yaml": {
-      "begin": "(Theme)",
-      "end": "(WordPress)",
-      "name": "meta.embedded.block.yaml",
-      "patterns": [
-        {
-          "include": "source.yaml"
+    "wordpress-css": {
+      "match": "^(?i)(Theme Name|Theme URI|Author|Author URI|Description|Version|Requires at least|Tested up to|Requires PHP|License|License URI|Text Domain|Tags|Domain Path|Template)(:)(.*)$",
+      "name": "meta.embedded.styles.wordpress",
+      "captures": {
+        "1": {
+          "name": "entity.name.tag.wordpress"
+        },
+        "2": {
+          "name": "punctuation.separator.key-value.mapping.wordpress"
+        },
+        "3": {
+          "name": "string.unquoted.plain.out.wordpress"
         }
-      ]
+      }
     }
   }
 }
