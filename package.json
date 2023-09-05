@@ -24,12 +24,10 @@
         "scopeName": "gutenberg-html.injection",
         "path": "./syntaxes/html-injection.json",
         "injectTo": [
-          "text.html.derivative",
-          "text.html.php"
+          "text.html.derivative"
         ],
         "embeddedLanguages": {
-          "meta.embedded.block.json": "json",
-          "meta.embedded.block.php": "php"
+          "meta.embedded.block.json": "json"
         }
       },
       {
