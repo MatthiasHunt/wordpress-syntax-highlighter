@@ -4,9 +4,6 @@
   "patterns": [
     {
       "include": "#gutenberg-html"
-    },
-    {
-      "include": "#gutenberg-embedded-php"
     }
   ],
   "repository": {
@@ -22,29 +19,6 @@
       "patterns": [
         {
           "include": "source.json"
-        }
-      ]
-    },
-    "gutenberg-embedded-php": {
-      "begin": "<\\?(?i:php|=)?",
-      "beginCaptures": {
-        "0": {
-          "name": "punctuation.section.embedded.begin.php"
-        }
-      },
-      "end": "(\\?)>",
-      "endCaptures": {
-        "0": {
-          "name": "punctuation.section.embedded.end.php"
-        },
-        "1": {
-          "name": "source.php"
-        }
-      },
-      "name": "meta.embedded.block.php",
-      "patterns": [
-        {
-          "include": "source.php"
         }
       ]
     }
