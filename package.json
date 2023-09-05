@@ -1,22 +1,48 @@
 {
   "name": "wordpress-syntax-highlighter",
   "displayName": "WordPress Syntax Highlighter",
-  "description": "A VS Code Extension that adds syntax highlighting to WordPress and Gutenberg decorators and function calls that exist inside traditional comment blocks",
+  "description": "Sytax Highlighting for WordPress Comments",
   "icon": "assets/package-icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MatthiasHunt/gutenburg-comment-highlight"
+    "url": "https://github.com/MatthiasHunt/wordpress-syntax-highlighter"
+  },
+  "galleryBanner": {
+    "color": "#23282d",
+    "theme": "dark"
   },
   "bugs": {
-    "url": "https://github.com/MatthiasHunt/gutenburg-comment-highlight/issues"
+    "url": "https://github.com/MatthiasHunt/wordpress-syntax-highlighter/issues"
+  },
+  "author": {
+    "name": "Matthias Hunt",
+    "email": "matthias.hunt@gmail.com"
   },
   "publisher": "matthiashunt",
+  "license": "MIT",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.81.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Themes",
+    "Other"
+  ],
+  "keywords": [
+    "Syntax",
+    "Highlighter",
+    "Highlight",
+    "Highlighting",
+    "Coloring",
+    "WordPress",
+    "Gutenberg",
+    "Blocks",
+    "Full Site Editing",
+    "CSS",
+    "HTML",
+    "PHP",
+    "Block Grammar"
   ],
   "contributes": {
     "grammars": [
