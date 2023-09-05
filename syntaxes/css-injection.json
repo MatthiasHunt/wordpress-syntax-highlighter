@@ -1,25 +1,55 @@
 {
-  "scopeName": "gutenberg-css.injection",
+  "scopeName": "wordpress-css.injection",
   "injectionSelector": "L:comment.block.css",
   "patterns": [
     {
-      "include": "#gutenberg-css"
+      "include": "#wordpress-css"
     }
   ],
   "repository": {
-    "gutenberg-css": {
-      "match": "([Aa])",
-      "name": "variable.parameter.gutenberg"
-    },
-    "gutenberg-embedded-yaml": {
-      "begin": "(Theme)",
-      "end": "(WordPress)",
-      "name": "meta.embedded.block.yaml",
-      "patterns": [
-        {
-          "include": "source.yaml"
+    "wordpress-css": {
+      "match": "^(?i)(Theme Name|Theme URI|Author|Author URI|Description|Version|Requires at least|Tested up to|Requires PHP|License|License URI|Text Domain|Tags|Domain Path|Template)(:)(.*)$",
+      "name": "meta.embedded.theme.wordpress",
+      "captures": {
+        "1": {
+          "name": "entity.name.tag.wordpress"
+        },
+        "2": {
+          "name": "punctuation.separator.tag-value.mapping.wordpress"
+        },
+        "3": {
+          "name": "meta.structure.theme.value.wordpress",
+          "patterns": [
+            {
+              "match": "(?<=: )(\\d+\\.\\d+(\\.\\d+)?)$",
+              "name": "constant.numeric.wordpress"
+            },
+            {
+              "match": "(?<=: )(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
+              "name": "markup.underline.link.wordpress"
+            },
+            {
+              "match": "(?<=: )([^\\s,]+(, [^\\s,]+)+)$",
+              "name": "meta.structure.taglist.wordpress",
+              "captures": {
+                "0": {
+                  "patterns": [
+                    {
+                      "match": ",",
+                      "name": "punctuation.separator.taglist.wordpress"
+                    },
+                    {
+                      "match": ".",
+                      "name": "string.unquoted.taglist.tag.wordpress"
+                    }
+                  ]
+                }
+              }
+            },
+            { "match": ".", "name": "string.unquoted.value.wordpress" }
+          ]
         }
-      ]
+      }
     }
   }
 }

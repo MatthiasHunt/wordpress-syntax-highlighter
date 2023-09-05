@@ -14,7 +14,7 @@
       "begin": "(wp:[^ ]+)",
       "beginCaptures": {
         "0": {
-          "name": "support.class.component.gutenberg"
+          "name": "entity.name.function.gutenberg"
         }
       },
       "end": ".?(?=\\/?-->)",

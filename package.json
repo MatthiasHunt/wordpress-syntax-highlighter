@@ -33,7 +33,7 @@
         }
       },
       {
-        "scopeName": "gutenberg-css.injection",
+        "scopeName": "wordpress-css.injection",
         "path": "./syntaxes/css-injection.json",
         "injectTo": [
           "source.css"
