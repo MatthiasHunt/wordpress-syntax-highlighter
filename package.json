@@ -38,6 +38,13 @@
         "injectTo": [
           "source.css"
         ]
+      },
+      {
+        "scopeName": "wordpress-php.injection",
+        "path": "./syntaxes/php-injection.json",
+        "injectTo": [
+          "text.html.php"
+        ]
       }
     ]
   }

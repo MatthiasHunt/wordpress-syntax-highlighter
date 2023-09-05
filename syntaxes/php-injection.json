@@ -1,15 +1,15 @@
 {
-  "scopeName": "wordpress-css.injection",
-  "injectionSelector": "L:comment.block.css",
+  "scopeName": "wordpress-php.injection",
+  "injectionSelector": "L:comment.block.documentation.phpdoc.php",
   "patterns": [
     {
-      "include": "#wordpress-css"
+      "include": "#wordpress-php"
     }
   ],
   "repository": {
-    "wordpress-css": {
-      "match": "^(?i)(Theme Name|Theme URI|Author|Author URI|Description|Version|Requires at least|Tested up to|Requires PHP|License|License URI|Text Domain|Tags|Domain Path|Template)(:)(.*)$",
-      "name": "meta.embedded.css.comment.wordpress",
+    "wordpress-php": {
+      "match": "(?i)(?<= \\* )(Title|Slug|Description|Categories|Keywords|Viewport Width|Block Types|Post Types|Template Types|Inserter|Source|Plugin Name|Plugin URI|Description|Version|Requires at least|Requires PHP|Author|Author URI|License|License URI|Text Domain|Domain Path|Network|Update URI)(:)(.*)$",
+      "name": "meta.embedded.php.comment.wordpress",
       "captures": {
         "1": {
           "name": "entity.name.tag.wordpress"
