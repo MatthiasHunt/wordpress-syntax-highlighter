@@ -2,7 +2,7 @@
   "name": "wordpress-syntax-highlighter",
   "displayName": "WordPress Syntax Highlighter",
   "description": "Sytax Highlighting for WordPress Comments",
-  "icon": "assets/package-icon.png",
+  "icon": "assets/wordpress-syntax-highlighter.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/MatthiasHunt/wordpress-syntax-highlighter"
