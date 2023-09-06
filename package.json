@@ -50,7 +50,8 @@
         "scopeName": "gutenberg-html.injection",
         "path": "./syntaxes/html-injection.json",
         "injectTo": [
-          "text.html.derivative"
+          "text.html.derivative",
+          "text.html.php"
         ],
         "embeddedLanguages": {
           "meta.embedded.block.json": "json"
