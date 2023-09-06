@@ -1,3 +1,10 @@
-node_modules
+# Dependency directory
+node_modules/
+
+# IDE & editors
+.idea
+.vscode
+
+#VSCode Marketplace
 *.vsix
 .DS_Store
