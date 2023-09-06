@@ -8,7 +8,7 @@
   ],
   "repository": {
     "wordpress-css": {
-      "match": "^(?i)(Theme Name|Theme URI|Author|Author URI|Description|Version|Requires at least|Tested up to|Requires PHP|License|License URI|Text Domain|Tags|Domain Path|Template)(:)(.*)$",
+      "match": "^(?i)(Theme Name|Theme URI|Author|Author URI|Description|Version|Requires at least|Tested up to|Requires PHP|License|License URI|Text Domain|Tags|Domain Path|Template)(: )(.*)$",
       "name": "meta.embedded.css.comment.wordpress",
       "captures": {
         "1": {
@@ -21,15 +21,23 @@
           "name": "meta.structure.theme.value.wordpress",
           "patterns": [
             {
-              "match": "(?<=: )(\\d+\\.\\d+(\\.\\d+)?)$",
+              "match": "(?i)(?<=Version: )(\\d+\\.\\d+(\\.\\d+)?)$",
               "name": "constant.numeric.wordpress"
             },
             {
-              "match": "(?<=: )(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
+              "match": "(?i)(?<=(Requires at least|Tested up to|Requires PHP): )(\\d+\\.\\d+)$",
+              "name": "constant.numeric.wordpress"
+            },
+            {
+              "match": "(?i)(?<=(Theme URI|Author URI|License URI): )(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
               "name": "markup.underline.link.wordpress"
             },
             {
-              "match": "(?<=: )([^\\s,]+(, [^\\s,]+)+)$",
+              "match": "(?i)(?<=(Theme Name|Author|Description|License|Text Domain|Domain Path|Theme URI|Author URI|License URI): ).*",
+              "name": "string.unquoted.value.wordpress"
+            },
+            {
+              "match": "(?<=Tags: )([^\\s,]+(, [^\\s,]+)*)$",
               "name": "meta.structure.taglist.wordpress",
               "captures": {
                 "0": {
@@ -46,7 +54,10 @@
                 }
               }
             },
-            { "match": ".", "name": "string.unquoted.value.wordpress" }
+            {
+              "match": ".",
+              "name": "invalid.illegal.unexpected-data-type.wordpress"
+            }
           ]
         }
       }
