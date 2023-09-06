@@ -1,7 +1,7 @@
 {
   "name": "wordpress-syntax-highlighter",
   "displayName": "WordPress Syntax Highlighter",
-  "description": "Sytax Highlighting for WordPress Comments",
+  "description": "Full Site Editing and Gutenberg Semantic Highlighting",
   "icon": "assets/wordpress-syntax-highlighter.png",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "license": "MIT",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.81.0"
+    "vscode": "^1.46.0"
   },
   "categories": [
     "Programming Languages",
