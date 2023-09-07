@@ -47,7 +47,6 @@
   "contributes": {
     "grammars": [
       {
-        "language": "html",
         "scopeName": "gutenberg-html.injection",
         "path": "./syntaxes/html-injection.json",
         "injectTo": [
@@ -59,7 +58,6 @@
         }
       },
       {
-        "language": "css",
         "scopeName": "wordpress-css.injection",
         "path": "./syntaxes/css-injection.json",
         "injectTo": [
@@ -67,7 +65,6 @@
         ]
       },
       {
-        "language": "php",
         "scopeName": "wordpress-php.injection",
         "path": "./syntaxes/php-injection.json",
         "injectTo": [

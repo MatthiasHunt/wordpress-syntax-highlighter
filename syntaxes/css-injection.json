@@ -18,37 +18,42 @@
           "name": "punctuation.separator.tag-value.mapping.wordpress"
         },
         "3": {
-          "name": "meta.structure.theme.value.wordpress",
+          "name": "meta.structure.tags.value.wordpress",
           "patterns": [
             {
+              "comment": "X.X or X.X.X",
               "match": "(?i)(?<=Version: )(\\d+\\.\\d+(\\.\\d+)?)$",
               "name": "constant.numeric.wordpress"
             },
             {
+              "comment": "X.X",
               "match": "(?i)(?<=(Requires at least|Tested up to|Requires PHP): )(\\d+\\.\\d+)$",
               "name": "constant.numeric.wordpress"
             },
             {
+              "comment": "",
               "match": "(?i)(?<=(Theme URI|Author URI|License URI): )(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
               "name": "markup.underline.link.wordpress"
             },
             {
+              "comment": "any string",
               "match": "(?i)(?<=(Theme Name|Author|Description|License|Text Domain|Domain Path|Theme URI|Author URI|License URI): ).*",
               "name": "string.unquoted.value.wordpress"
             },
             {
-              "match": "(?<=Tags: )([^\\s,]+(, [^\\s,]+)*)$",
-              "name": "meta.structure.taglist.wordpress",
+              "comment": "csv with space after each comma. No spaces allowed in values",
+              "match": "(?i)(?<=Tags: )([^\\s,]+(, [^\\s,]+)*)$",
+              "name": "meta.structure.array.unbracketed.wordpress",
               "captures": {
                 "0": {
                   "patterns": [
                     {
                       "match": ",",
-                      "name": "punctuation.separator.taglist.wordpress"
+                      "name": "punctuation.separator.array.wordpress"
                     },
                     {
                       "match": ".",
-                      "name": "string.unquoted.taglist.tag.wordpress"
+                      "name": "string.unquoted.array.singlevalue.wordpress"
                     }
                   ]
                 }

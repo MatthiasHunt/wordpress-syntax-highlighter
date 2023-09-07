@@ -8,7 +8,7 @@
   ],
   "repository": {
     "wordpress-php": {
-      "match": "(?i)(?<= \\* )(Title|Slug|Description|Categories|Keywords|Viewport Width|Block Types|Post Types|Template Types|Inserter|Source|Plugin Name|Plugin URI|Description|Version|Requires at least|Requires PHP|Author|Author URI|License|License URI|Text Domain|Domain Path|Network|Update URI)(:)(.*)$",
+      "match": "(?i)(?<= \\* )(Title|Slug|Description|Categories|Keywords|Viewport Width|Block Types|Post Types|Template Types|Inserter|Source|Plugin Name|Plugin URI|Description|Version|Requires at least|Requires PHP|Author|Author URI|License|License URI|Text Domain|Domain Path|Network|Update URI)(: )(.*)$",
       "name": "meta.embedded.php.comment.wordpress",
       "captures": {
         "1": {
@@ -18,35 +18,95 @@
           "name": "punctuation.separator.tag-value.mapping.wordpress"
         },
         "3": {
-          "name": "meta.structure.theme.value.wordpress",
+          "name": "meta.structure.tags.value.wordpress",
           "patterns": [
             {
-              "match": "(?<=: )(\\d+\\.\\d+(\\.\\d+)?)$",
+              "comment": "X.X or X.X.X",
+              "match": "(?i)(?<=Version: )(\\d+\\.\\d+(\\.\\d+)?)$",
               "name": "constant.numeric.wordpress"
             },
             {
-              "match": "(?<=: )(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
+              "comment": "X.X",
+              "match": "(?i)(?<=(Requires at least|Requires PHP): )(\\d+\\.\\d+)$",
+              "name": "constant.numeric.wordpress"
+            },
+            {
+              "comment": "integer",
+              "match": "(?i)(?<=Viewport Width: )(\\d+)$",
+              "name": "constant.numeric.wordpress"
+            },
+            {
+              "comment": "URL format",
+              "match": "(?i)(?<=(Plugin URI|Author URI|License URI|Update URI): )(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
               "name": "markup.underline.link.wordpress"
             },
             {
-              "match": "(?<=: )([^\\s,]+(, [^\\s,]+)+)$",
-              "name": "meta.structure.taglist.wordpress",
+              "comment": "string with no whitespace",
+              "match": "(?i)(?<=Slug: )(\\S+)$",
+              "name": "string.unquoted.value.wordpress"
+            },
+            {
+              "comment": "boolean",
+              "match": "(?i)(?<=Inserter: )(?-i)(true|false)$",
+              "name": "constant.language.boolean.wordpress"
+            },
+            {
+              "comment": "only true",
+              "match": "(?i)(?<=Network: )(?-i)(true)$",
+              "name": "constant.language.boolean.wordpress"
+            },
+            {
+              "comment": "exactly plugin or theme",
+              "match": "(?i)(?<=Source: )(?-i)(plugin|theme)$",
+              "name": "constant.language.source.wordpress"
+            },
+            {
+              "comment": "any string",
+              "match": "(?i)(?<=(Title|Description|Plugin Name|Plugin URI|Description|Author URI|License|License URI|Text Domain|Domain Path|Update URI): ).*",
+              "name": "string.unquoted.value.wordpress"
+            },
+            {
+              "comment": "csv with space after each comma. No spaces allowed in values",
+              "match": "(?i)(?<=(Categories|Block Types|Post Types|Template Types): )([^\\s,]+(, [^\\s,]+)*)$",
+              "name": "meta.structure.array.unbracketed.wordpress",
               "captures": {
                 "0": {
                   "patterns": [
                     {
                       "match": ",",
-                      "name": "punctuation.separator.taglist.wordpress"
+                      "name": "punctuation.separator.array.wordpress"
                     },
                     {
                       "match": ".",
-                      "name": "string.unquoted.taglist.tag.wordpress"
+                      "name": "string.unquoted.array.singlevalue.wordpress"
                     }
                   ]
                 }
               }
             },
-            { "match": ".", "name": "string.unquoted.value.wordpress" }
+            {
+              "comment": "csv with space after each comma",
+              "match": "(?i)(?<=(Keywords|Author): )(\\S[^,]*(, \\S[^,]*)*)",
+              "name": "meta.structure.array.unbracketed.wordpress",
+              "captures": {
+                "0": {
+                  "patterns": [
+                    {
+                      "match": ",",
+                      "name": "punctuation.separator.array.wordpress"
+                    },
+                    {
+                      "match": ".",
+                      "name": "string.unquoted.array.value.wordpress"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "match": ".",
+              "name": "invalid.illegal.unexpected-data-type.wordpress"
+            }
           ]
         }
       }
