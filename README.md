@@ -8,11 +8,11 @@ This extension provides syntax highlighting for the following WordPress syntaxes
 ## Examples
 
 ### HTML
-![Screenshot of an HTML file containing colorized WordPress blocks](https://github.com/MatthiasHunt/wordpress-syntax-highlighter/blob/main/assets/html-example.png)
+![Screenshot of an HTML file containing colorized WordPress blocks](assets/html-example.png)
 ### CSS
-![Screenshot of a CSS WordPress theme file containing a colorized header](https://github.com/MatthiasHunt/wordpress-syntax-highlighter/blob/main/assets/css-example.png)
+![Screenshot of a CSS WordPress theme file containing a colorized header](assets/css-example.png)
 ### PHP
-![Screenshot of a PHP WordPress theme file containing a colorized block pattern header and colorized HTML](https://github.com/MatthiasHunt/wordpress-syntax-highlighter/blob/main/assets/php-example.png)
+![Screenshot of a PHP WordPress theme file containing a colorized block pattern header and colorized HTML](assets/php-example.png)
 
 ## Additional Features
 
@@ -23,11 +23,11 @@ The Syntax Highlighter also implements rules for pattern/header field validation
 - https://developer.wordpress.org/plugins/plugin-basics/header-requirements/
 - https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
 
-![Screenshot of a PHP WordPress theme file containing a colorized block pattern header and colorized HTML](https://github.com/MatthiasHunt/wordpress-syntax-highlighter/blob/main/assets/value-error.png)
+![Screenshot of a PHP WordPress theme file containing a colorized block pattern header and colorized HTML](assets/value-error.png)
 
 Unmatched brackets cause error highlighting inside the embedded JSON of WordPress blocks
 
-![Screenshot of a PHP WordPress theme file containing a colorized block pattern header and colorized HTML](https://github.com/MatthiasHunt/wordpress-syntax-highlighter/blob/main/assets/bracket-matching.png)
+![Screenshot of a PHP WordPress theme file containing a colorized block pattern header and colorized HTML](assets/bracket-matching.png)
 
 ## Credits
 
