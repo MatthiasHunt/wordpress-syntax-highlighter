@@ -31,11 +31,6 @@
               "name": "constant.numeric.wordpress"
             },
             {
-              "comment": "",
-              "match": "(?i)(?<=(Theme URI|Author URI|License URI): )(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})",
-              "name": "markup.underline.link.wordpress"
-            },
-            {
               "comment": "any string",
               "match": "(?i)(?<=(Theme Name|Author|Description|License|Text Domain|Domain Path|Theme URI|Author URI|License URI): ).*",
               "name": "string.unquoted.value.wordpress"
