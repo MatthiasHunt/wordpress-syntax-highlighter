@@ -8,10 +8,15 @@ This extension provides syntax highlighting for the following WordPress syntaxes
 ## Examples
 
 ### HTML
+
 ![Screenshot of an HTML file containing colorized WordPress blocks](assets/html-example.png)
+
 ### CSS
+
 ![Screenshot of a CSS WordPress theme file containing a colorized header](assets/css-example.png)
+
 ### PHP
+
 ![Screenshot of a PHP WordPress theme file containing a colorized block pattern header and colorized HTML](assets/php-example.png)
 
 ## Additional Features
@@ -31,6 +36,6 @@ Unmatched brackets cause error highlighting inside the embedded JSON of WordPres
 
 ## Credits
 
-This project was inspired by [Gutenberg Comment Highlight](https://github.com/chrisrhymes/gutenburg-comment-highlight) by [@chrisrhymes](https://github.com/chrisrhymes)
+This project was inspired by [Gutenberg Comment Highlight](https://marketplace.visualstudio.com/items?itemName=chrisrhymes.gutenburg-comment-highlight) by [@chrisrhymes](https://github.com/chrisrhymes)
 
 Wapuu design by [@marktimemedia](https://github.com/marktimemedia)
