@@ -8,7 +8,7 @@
   ],
   "repository": {
     "wordpress-php": {
-      "match": "(?i)(?<= \\* )(Title|Slug|Description|Categories|Keywords|Viewport Width|Block Types|Post Types|Template Types|Inserter|Source|Plugin Name|Plugin URI|Description|Version|Requires at least|Requires PHP|Author|Author URI|License|License URI|Text Domain|Domain Path|Network|Update URI)(: )(.*)$",
+      "match": "(?i)(?<= \\* )(Title|Slug|Description|Categories|Keywords|Viewport Width|Block Types|Post Types|Template Types|Inserter|Source|Plugin Name|Plugin URI|Description|Version|Requires at least|Requires PHP|Author|Author URI|License|License URI|Text Domain|Domain Path|Network|Update URI|Requires Plugins)(: )(.*)$",
       "name": "meta.embedded.php.comment.wordpress",
       "captures": {
         "1": {
@@ -81,7 +81,7 @@
             },
             {
               "comment": "csv with space after each comma",
-              "match": "(?i)(?<=(Keywords|Author): )(\\S[^,]*(, \\S[^,]*)*)",
+              "match": "(?i)(?<=(Keywords|Author|Requires Plugins): )(\\S[^,]*(, \\S[^,]*)*)",
               "name": "meta.structure.array.unbracketed.wordpress",
               "captures": {
                 "0": {
