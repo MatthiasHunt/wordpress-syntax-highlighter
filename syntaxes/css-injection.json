@@ -36,6 +36,11 @@
               "name": "string.unquoted.value.wordpress"
             },
             {
+              "comment": "any string no whitespace",
+              "match": "(?i)(?<=(Template): )(^[^\\\\\/\\s?%*:|\"<>\\.]+)",
+              "name": "string.unquoted.value.wordpress"
+            },
+            {
               "comment": "csv with space after each comma. No spaces allowed in values",
               "match": "(?i)(?<=Tags: )([^\\s,]+(, [^\\s,]+)*)$",
               "name": "meta.structure.array.unbracketed.wordpress",
